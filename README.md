@@ -8,4 +8,4 @@ The workflow only creates repos. It has no code path that deletes or changes exi
 
 ## If it stops working
 
-The token expires on the date you chose when you made it. When it does, requests will finish with `status: "error"`. Regenerate it at **github.com/settings/personal-access-tokens** (same settings: all repositories, Administration read and write), then update the secret under this repo's **Settings → Secrets and variables → Actions**.
+The token expires on the date you chose when you made it. When it does, requests will finish with `status: "error"`. Regenerate it at **github.com/settings/personal-access-tokens** (same settings: All repositories, Repository creation read and write), then update the secret under this repo's **Settings → Secrets and variables → Actions**.

@@ -30,4 +30,4 @@ Only create repos the owner asked for, or that a task they asked for clearly nee
 
 ## Setup (already done by the owner)
 
-- Secret `REPO_CREATOR_TOKEN`: a fine-grained personal access token with **Administration: read and write** on all of the owner's repositories. If requests start failing with an authentication or permission error, the token has probably expired — tell the owner to regenerate it and update the secret.
+- Secret `REPO_CREATOR_TOKEN`: a fine-grained personal access token with **All repositories** access and the **Repository creation: read and write** permission (and nothing broader, so it cannot delete or transfer repos). If requests start failing with an authentication or permission error, the token has probably expired — tell the owner to regenerate it and update the secret.
