@@ -29,6 +29,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.REPO_CREATOR_TOKEN }}
         run: |
+          set +e            # handle errors per request instead of aborting the run
           set -uo pipefail
           shopt -s nullglob
           mkdir -p requests/done
