@@ -1,0 +1,96 @@
+name: Create repo
+
+# Creates GitHub repos on request. Claude (or anyone with push access) adds a
+# JSON file to requests/pending/; this workflow creates the repo with the
+# REPO_CREATOR_TOKEN secret, then moves the request to requests/done/ with the
+# result recorded in it. This workflow only ever creates repos — it never
+# deletes or modifies existing ones.
+
+on:
+  push:
+    branches: [main]
+    paths: ["requests/pending/**"]
+  workflow_dispatch:
+
+concurrency:
+  group: create-repo
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # to move processed requests into requests/done/
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Process pending requests
+        env:
+          GH_TOKEN: ${{ secrets.REPO_CREATOR_TOKEN }}
+        run: |
+          set -uo pipefail
+          shopt -s nullglob
+          mkdir -p requests/done
+
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "::error::REPO_CREATOR_TOKEN secret is not set"
+            exit 1
+          fi
+
+          processed=0
+          for req in requests/pending/*.json; do
+            base="$(basename "$req")"
+            out="requests/done/$base"
+            processed=$((processed + 1))
+
+            if ! jq -e . "$req" >/dev/null 2>&1; then
+              jq -n --arg f "$base" '{status:"error", error:"not valid JSON", file:$f}' > "$out"
+              git rm -q "$req"
+              continue
+            fi
+
+            name="$(jq -r '.name // empty' "$req")"
+            description="$(jq -r '.description // ""' "$req")"
+            private="$(jq -r 'if has("private") then .private else true end' "$req")"
+            auto_init="$(jq -r '.auto_init // false' "$req")"
+            processed_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+            if ! [[ "$name" =~ ^[A-Za-z0-9._-]{1,100}$ ]]; then
+              jq --arg t "$processed_at" '. + {status:"error", error:"missing or invalid name", processed_at:$t}' "$req" > "$out"
+              git rm -q "$req"
+              continue
+            fi
+
+            resp="$(gh api --method POST user/repos \
+                      -f name="$name" \
+                      -f description="$description" \
+                      -F private="$private" \
+                      -F auto_init="$auto_init" 2>&1)"
+            code=$?
+
+            if [ $code -eq 0 ]; then
+              url="$(echo "$resp" | jq -r '.html_url')"
+              jq --arg u "$url" --arg t "$processed_at" '. + {status:"created", url:$u, processed_at:$t}' "$req" > "$out"
+              echo "Created $url"
+            elif echo "$resp" | grep -qi "name already exists"; then
+              jq --arg t "$processed_at" '. + {status:"exists", processed_at:$t}' "$req" > "$out"
+              echo "Repo $name already exists"
+            else
+              err="$(echo "$resp" | head -c 500)"
+              jq --arg e "$err" --arg t "$processed_at" '. + {status:"error", error:$e, processed_at:$t}' "$req" > "$out"
+              echo "::warning::Failed to create $name: $err"
+            fi
+            git rm -q "$req"
+          done
+
+          if [ $processed -eq 0 ]; then
+            echo "No pending requests."
+            exit 0
+          fi
+
+          git add requests/done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "ops: process $processed repo request(s)"
+          git push
