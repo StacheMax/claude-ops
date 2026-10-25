@@ -1,5 +1,7 @@
 {
   "name": "claude-ops",
   "description": "Permission test: this repo already exists, so the expected result is status 'exists' and nothing is created.",
-  "private": true
+  "private": true,
+  "status": "exists",
+  "processed_at": "2026-10-25T19:08:14Z"
 }
