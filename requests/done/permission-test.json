@@ -1,0 +1,9 @@
+{
+  "name": "claude-ops",
+  "description": "Permission test: this repo already exists, so the expected result is status 'exists' and nothing is created.",
+  "private": true,
+  "attempt": 3,
+  "status": "error",
+  "error": "{\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/repos/repos#create-a-repository-for-the-authenticated-user\",\"status\":\"403\"}gh: Resource not accessible by personal access token (HTTP 403)",
+  "processed_at": "2026-10-25T19:04:17Z"
+}
