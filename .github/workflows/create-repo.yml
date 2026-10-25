@@ -23,7 +23,7 @@ jobs:
   create:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Process pending requests
         env:
@@ -72,10 +72,10 @@ jobs:
             if [ $code -eq 0 ]; then
               url="$(echo "$resp" | jq -r '.html_url')"
               jq --arg u "$url" --arg t "$processed_at" '. + {status:"created", url:$u, processed_at:$t}' "$req" > "$out"
-              echo "Created $url"
+              echo "::notice::Created $url"
             elif echo "$resp" | grep -qi "name already exists"; then
               jq --arg t "$processed_at" '. + {status:"exists", processed_at:$t}' "$req" > "$out"
-              echo "Repo $name already exists"
+              echo "::notice::Repo $name already exists (token can create repos)"
             else
               err="$(echo "$resp" | head -c 500)"
               jq --arg e "$err" --arg t "$processed_at" '. + {status:"error", error:$e, processed_at:$t}' "$req" > "$out"
@@ -92,5 +92,11 @@ jobs:
           git add requests/done
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "ops: process $processed repo request(s)"
-          git push
+          if ! out_commit="$(git commit -m "ops: process $processed repo request(s)" 2>&1)"; then
+            echo "::error::git commit failed: $(echo "$out_commit" | tr '\n' ' ' | head -c 800)"
+            exit 1
+          fi
+          if ! out_push="$(git push 2>&1)"; then
+            echo "::error::git push failed: $(echo "$out_push" | tr '\n' ' ' | head -c 800)"
+            exit 1
+          fi
