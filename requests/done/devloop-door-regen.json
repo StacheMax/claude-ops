@@ -1,0 +1,9 @@
+{
+  "name": "devloop-door-regen",
+  "description": "Regeneration test: devloop-door rebuilt from its requirements alone",
+  "private": true,
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/devloop-door-regen",
+  "processed_at": "2026-11-12T06:37:57Z"
+}

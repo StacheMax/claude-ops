@@ -1,6 +1,0 @@
-{
-  "name": "devloop-door-regen",
-  "description": "Regeneration test: devloop-door rebuilt from its requirements alone",
-  "private": true,
-  "auto_init": false
-}
