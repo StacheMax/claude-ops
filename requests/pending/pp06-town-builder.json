@@ -1,0 +1,6 @@
+{
+  "name": "pp06-town-builder",
+  "description": "Practice project 06: procedural town builder first pass",
+  "private": true,
+  "auto_init": false
+}
