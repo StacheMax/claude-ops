@@ -2,5 +2,8 @@
   "name": "devloop-door",
   "description": "Practice project: a dev loop with a version door (swap to a new build mid-play)",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/devloop-door",
+  "processed_at": "2026-11-12T01:21:47Z"
 }
