@@ -1,0 +1,6 @@
+{
+  "name": "pp12-moves",
+  "description": "Practice project: characters that move with weight (rig, mocap clips, motion matching)",
+  "private": true,
+  "auto_init": false
+}
