@@ -2,5 +2,7 @@
   "name": "pp03-large-objects",
   "description": "Practice project: very large objects (giant tree) rendering and collision spike",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "exists",
+  "processed_at": "2026-11-12T06:38:34Z"
 }

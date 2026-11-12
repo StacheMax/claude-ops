@@ -2,5 +2,8 @@
   "name": "pp02-open-world",
   "description": "Practice project PP-02: open world technology spike (chunked terrain, LOD, streaming)",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp02-open-world",
+  "processed_at": "2026-11-12T06:38:31Z"
 }
