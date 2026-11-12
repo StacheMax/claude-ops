@@ -1,0 +1,6 @@
+{
+  "name": "pp07-simulation",
+  "description": "Practice project 07: headless settlement and population simulation spike",
+  "private": true,
+  "auto_init": false
+}
