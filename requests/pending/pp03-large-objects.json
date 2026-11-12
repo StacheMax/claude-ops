@@ -1,0 +1,6 @@
+{
+  "name": "pp03-large-objects",
+  "description": "Practice project: very large objects (giant tree) rendering and collision spike",
+  "private": true,
+  "auto_init": false
+}
