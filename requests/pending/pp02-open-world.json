@@ -1,0 +1,6 @@
+{
+  "name": "pp02-open-world",
+  "description": "Practice project PP-02: open world technology spike (chunked terrain, LOD, streaming)",
+  "private": true,
+  "auto_init": false
+}
