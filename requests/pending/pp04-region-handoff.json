@@ -1,0 +1,6 @@
+{
+  "name": "pp04-region-handoff",
+  "description": "Practice project PP-04: handing players between region servers (first-pass spike)",
+  "private": true,
+  "auto_init": false
+}
