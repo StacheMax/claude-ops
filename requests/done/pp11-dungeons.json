@@ -2,5 +2,8 @@
   "name": "pp11-dungeons",
   "description": "Practice project: dungeons with mobs, elites and bosses, hand-built then generated",
   "private": true,
-  "auto_init": true
+  "auto_init": true,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp11-dungeons",
+  "processed_at": "2026-11-12T15:38:00Z"
 }
