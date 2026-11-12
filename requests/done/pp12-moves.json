@@ -2,5 +2,8 @@
   "name": "pp12-moves",
   "description": "Practice project: characters that move with weight (rig, mocap clips, motion matching)",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp12-moves",
+  "processed_at": "2026-11-12T22:23:51Z"
 }
