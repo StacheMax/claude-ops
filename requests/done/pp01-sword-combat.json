@@ -2,5 +2,7 @@
   "name": "pp01-sword-combat",
   "description": "Practice project: sword combat first pass",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "exists",
+  "processed_at": "2026-11-12T06:39:23Z"
 }

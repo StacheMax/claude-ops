@@ -2,5 +2,8 @@
   "name": "pp07-simulation",
   "description": "Practice project 07: headless settlement and population simulation spike",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp07-simulation",
+  "processed_at": "2026-11-12T06:39:28Z"
 }

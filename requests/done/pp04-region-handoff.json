@@ -2,5 +2,8 @@
   "name": "pp04-region-handoff",
   "description": "Practice project PP-04: handing players between region servers (first-pass spike)",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp04-region-handoff",
+  "processed_at": "2026-11-12T06:39:24Z"
 }
