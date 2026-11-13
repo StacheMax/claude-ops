@@ -1,0 +1,6 @@
+{
+  "name": "game-spike-template",
+  "description": "Starter template for new game practice spikes",
+  "private": true,
+  "auto_init": false
+}
