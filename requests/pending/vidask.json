@@ -1,0 +1,6 @@
+{
+  "name": "vidask",
+  "description": "Ask a local video-language model questions about game clips (job queue + desktop worker)",
+  "private": true,
+  "auto_init": true
+}
