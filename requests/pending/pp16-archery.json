@@ -1,0 +1,6 @@
+{
+  "name": "pp16-archery",
+  "description": "The Game, practice project PP-16: bows and server-run arrows that fit the sword combat",
+  "private": true,
+  "auto_init": false
+}
