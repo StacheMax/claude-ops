@@ -1,0 +1,6 @@
+{
+  "name": "pp14-portals",
+  "description": "Practice project PP-14: see-through walk-through portals and a real-time wormhole look (Godot 4 .NET)",
+  "private": true,
+  "auto_init": false
+}
