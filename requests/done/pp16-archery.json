@@ -2,5 +2,8 @@
   "name": "pp16-archery",
   "description": "The Game, practice project PP-16: bows and server-run arrows that fit the sword combat",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp16-archery",
+  "processed_at": "2026-11-13T20:00:39Z"
 }
