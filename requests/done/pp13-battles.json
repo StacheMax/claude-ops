@@ -2,5 +2,8 @@
   "name": "pp13-battles",
   "description": "Practice project: mass battles with RTS orders, every soldier hit by its own blows and arrows",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp13-battles",
+  "processed_at": "2026-11-13T04:57:57Z"
 }
