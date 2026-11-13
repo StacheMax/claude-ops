@@ -1,0 +1,6 @@
+{
+  "name": "pp13-battles",
+  "description": "Practice project: mass battles with RTS orders, every soldier hit by its own blows and arrows",
+  "private": true,
+  "auto_init": false
+}
