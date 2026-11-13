@@ -2,5 +2,8 @@
   "name": "pp14-portals",
   "description": "Practice project PP-14: see-through walk-through portals and a real-time wormhole look (Godot 4 .NET)",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp14-portals",
+  "processed_at": "2026-11-13T06:22:42Z"
 }
