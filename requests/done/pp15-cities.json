@@ -2,5 +2,7 @@
   "name": "pp15-cities",
   "description": "Practice project PP-15: cities of tens of thousands of people, crowd simulation and crowd rendering at scale (.NET 8 + Godot 4 .NET)",
   "private": true,
-  "auto_init": true
+  "auto_init": true,
+  "status": "exists",
+  "processed_at": "2026-11-13T06:24:50Z"
 }

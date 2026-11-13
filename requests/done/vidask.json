@@ -2,5 +2,8 @@
   "name": "vidask",
   "description": "Ask a local video-language model questions about game clips (job queue + desktop worker)",
   "private": true,
-  "auto_init": true
+  "auto_init": true,
+  "status": "created",
+  "url": "https://github.com/StacheMax/vidask",
+  "processed_at": "2026-11-13T06:24:53Z"
 }
