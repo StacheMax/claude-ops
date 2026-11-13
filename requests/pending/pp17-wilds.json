@@ -1,6 +1,6 @@
 {
   "name": "pp17-wilds",
-  "description": "Practice project PP-17: wildlife, monsters and dungeon-fed monster presence",
+  "description": "The Game, practice project PP-17: wild animals and monsters counted far away, bodies and fights near the player",
   "private": true,
   "auto_init": false
 }
