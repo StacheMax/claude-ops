@@ -1,0 +1,6 @@
+{
+  "name": "game-hub-media",
+  "description": "Pictures and clips for Max's game hub (kept apart so the hub repo stays light)",
+  "private": true,
+  "auto_init": false
+}
