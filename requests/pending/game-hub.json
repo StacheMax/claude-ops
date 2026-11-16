@@ -1,0 +1,6 @@
+{
+  "name": "game-hub",
+  "description": "Max's hub for The Game: showreel, timeline and every project's docs, served from his PC and fed by git",
+  "private": true,
+  "auto_init": false
+}
