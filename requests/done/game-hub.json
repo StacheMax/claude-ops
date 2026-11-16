@@ -2,5 +2,8 @@
   "name": "game-hub",
   "description": "Max's hub for The Game: showreel, timeline and every project's docs, served from his PC and fed by git",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/game-hub",
+  "processed_at": "2026-11-16T00:12:45Z"
 }
