@@ -2,5 +2,8 @@
   "name": "game-hub-media",
   "description": "Pictures and clips for Max's game hub (kept apart so the hub repo stays light)",
   "private": true,
-  "auto_init": false
+  "auto_init": false,
+  "status": "created",
+  "url": "https://github.com/StacheMax/game-hub-media",
+  "processed_at": "2026-11-16T00:35:16Z"
 }
