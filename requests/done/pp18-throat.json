@@ -2,5 +2,8 @@
   "name": "pp18-throat",
   "description": "The Game, practice project PP-18: a geometric wormhole you really walk through",
   "private": true,
-  "auto_init": true
+  "auto_init": true,
+  "status": "created",
+  "url": "https://github.com/StacheMax/pp18-throat",
+  "processed_at": "2026-11-21T00:46:27Z"
 }
